@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clipboard Manager</title>
+  <style>
+    body {
+      width: 400px;
+      height: 600px;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    h1 {
+      font-size: 1.5em;
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 1em;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #history {
+      max-height: 400px;
+      overflow-y: auto;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+    }
+    .item {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fafafa;
+    }
+    .timestamp {
+      font-size: 0.8em;
+      color: #888;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <h1>Clipboard History</h1>
+  <button id="readClipboard">Read Clipboard</button>
+  <button id="clearHistory">Clear History</button>
+  <div id="history"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
